@@ -76,9 +76,16 @@ body {
   .operator {
     background: gray;
     color: white;
+    font-size: 30px;
+  }
+
+  .clear {
+    background: rgb(0, 0, 255);
+    color: white;
   }
 
   .equal-sign {
     grid-column: -2;
     grid-row: 2 / span 4;
+    background: rgb(47, 255, 0);
   }
