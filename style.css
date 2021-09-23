@@ -84,12 +84,12 @@ body {
   }
 
   .clear {
-    background: rgb(0, 0, 255);
+    background: rgb(0, 110, 255);
     color: white;
   }
 
   .clear:hover {
-    filter: brightness(150%);
+    filter: brightness(90%);
   }
 
   .equal-sign {
