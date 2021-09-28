@@ -6,4 +6,9 @@ function sendNumberValue(number) {
    console.log(number);
 }
 
-console.log(inputBtn);
+// Add Event Listeners for Numbers, Operators and Decimal
+inputBtns.forEach((inputBtn) => {
+   if (inputBtn.classList.length === 0) {
+       inputBtn.addEventListener('click', sendNumberValue)
+   }
+});
