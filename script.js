@@ -1,18 +1,18 @@
 const calculatorDisplay = document.querySelector('h1');
-const inputBtn = document.querySelectorAll('button');
+const inputBtns = document.querySelectorAll('button');
 const clearBtn = document.getElementById('clear-btn');
 
 function sendNumberValue(number) {
-   console.log(number);
+   calculatorDisplay.textContent = number;
 }
 
 // Add Event Listeners for Numbers, Operators and Decimal
 inputBtns.forEach((inputBtn) => {
    if (inputBtn.classList.length === 0) {
-       inputBtn.addEventListener('click', sendNumberValue(inputBtn.value));
+       inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
    } else if (inputBtn.classList.contains('operator')) {
-      inputBtn.addEventListener('click', sendNumberValue(inputBtn.value));
+      inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
    } else if (inputBtn.classList.contains('decimal')) {
-      inputBtn.addEventListener('click', sendNumberValue());
+      inputBtn.addEventListener('click', () => sendNumberValue());
    }
 });
