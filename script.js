@@ -18,3 +18,8 @@ inputBtns.forEach((inputBtn) => {
       inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
    }
 });
+
+// Reset Display
+function resetAll() {
+   calculatorDisplay.textContent = '0';
+}
