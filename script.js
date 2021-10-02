@@ -23,3 +23,6 @@ inputBtns.forEach((inputBtn) => {
 function resetAll() {
    calculatorDisplay.textContent = '0';
 }
+
+// Event Listener
+clearBtn.addEventListener('click', resetAll);
