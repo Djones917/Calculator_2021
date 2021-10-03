@@ -9,7 +9,10 @@ function sendNumberValue(number) {
 }
 
 function addDecimal() {
-   
+   // If no decimal, add one
+   if (!calculatorDisplay.textContent.includes('.')) {
+      calculatorDisplay.textContent = `${calculatorDisplay.textContent}.`;
+   }
 }
 
 // Add Event Listeners for Numbers, Operators and Decimal
@@ -19,7 +22,7 @@ inputBtns.forEach((inputBtn) => {
    } else if (inputBtn.classList.contains('operator')) {
       inputBtn.addEventListener('click', () => sendNumberValue(inputBtn.value));
    } else if (inputBtn.classList.contains('decimal')) {
-      inputBtn.addEventListener('click', () => addDecimal);
+      inputBtn.addEventListener('click', () => addDecimal());
    }
 });
 
