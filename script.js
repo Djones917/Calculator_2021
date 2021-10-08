@@ -27,6 +27,9 @@ function useOperator(operator) {
    if (!firstValue) {
       firstValue = currentValue;
    }
+   operatorValue = operator;
+   console.log('firstValue', firstValue);
+   console.log('operator', operatorValue);
 }
 
 // Add Event Listeners for Numbers, Operators and Decimal
