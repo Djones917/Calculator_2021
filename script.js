@@ -18,6 +18,8 @@ function addDecimal() {
    // If no decimal, add one
    if (!calculatorDisplay.textContent.includes('.')) {
       calculatorDisplay.textContent = `${calculatorDisplay.textContent}.`;
+   } else {
+      console.log('currentValue', currentValue);
    }
 }
 
@@ -27,6 +29,8 @@ function useOperator(operator) {
    if (!firstValue) {
       firstValue = currentValue;
    }
+   // Ready for next value, store operator
+   awaitingNextValue = true;
    operatorValue = operator;
    console.log('firstValue', firstValue);
    console.log('operator', operatorValue);
