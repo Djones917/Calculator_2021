@@ -9,9 +9,10 @@ let awaitingNextValue = false;
 
 
 function sendNumberValue(number) {
-   // If current display value is 0, replace it, if not add number
-   const displayValue = calculatorDisplay.textContent;
-   calculatorDisplay.textContent = displayValue === '0' ? number : displayValue + number;
+   // Replace current display value if first value is entered
+   if (awaitingNextValue) {
+      calculatorDisplay.textContent = number;
+   }
 }
 
 function addDecimal() {
